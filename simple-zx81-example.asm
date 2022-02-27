@@ -22,6 +22,7 @@ PROGRAMSTART: ; <- the program will start here! (assuming no return to basic)
 
 
 maincycle: 
+    xor a ; unuseful instruction just to test compiler
     ld a,(LAST_K)
     inc a
     jrp nz,maincycle ; MACRO that is using JR if inside jump limits, else JP
