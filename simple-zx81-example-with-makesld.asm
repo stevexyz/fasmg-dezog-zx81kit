@@ -42,7 +42,7 @@ displaychar:
     jrp maincycle ; main loop
 
 error:
-  somebytes equ 0,1,2,3 ; first part defined
+  define somebytes 0,1,2,3 ; first part defined
   db somebytes,4,5,6,7 ; instanciated and second part added
 
 dfile: 
