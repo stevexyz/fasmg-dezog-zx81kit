@@ -18,10 +18,18 @@ include 'inc/pgmprefix.inc' ; system variables
 
 ;==========================================================================
 
+macro EXAMPLE_MACRO
+    ; just some simple example
+    ld a,1
+    ld a,2
+    ld a,3
+    ld a,4
+end macro
+
 PROGRAMSTART: ; <- the program will start here! (assuming no return to basic)
 
-
 maincycle: 
+    EXAMPLE_MACRO
     xor a ; unuseful instruction just to test compiler
     ld a,(LAST_K)
     inc a
